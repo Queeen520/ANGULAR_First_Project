@@ -1,0 +1,13 @@
+<h2>Here are the Products</h2>
+<br>                    <!-- we give the index the name productId -->
+<div *ngFor="let product of products ; index as productId">
+<h3>
+<a routerLink="products/{{productId}}">
+    {{product.name}}
+</a>
+
+</h3>  <!-- *ngIf into p ! creates the p element only if it has a description -->
+<p *ngIf="product.description">
+    Description: {{product.description}}
+</p>
+</div>
